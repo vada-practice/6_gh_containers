@@ -11,6 +11,9 @@ jobs:
   test:
     environment: Testing
     runs-on: ubuntu-latest
+    container:
+      image: node:16
+      #env: example # here we can have container level environment.
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: cluster0.79wd894.mongodb.net
